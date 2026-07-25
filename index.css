@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* Custom Font Families */
+@layer base {
+  html {
+    font-family: 'Tajawal', 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  html[dir="ltr"] {
+    font-family: 'Inter', 'Tajawal', sans-serif;
+  }
+  
+  body {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom Scrollbar */
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1e293b;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #f59e0b;
+  }
+}
+
+/* Line Clamp Utilities */
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Selection Color */
+::selection {
+  background-color: rgba(245, 158, 11, 0.3);
+  color: white;
+}
+
+/* Focus Styles */
+*:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for RTL/LTR switch */
+html {
+  transition: direction 0.3s ease;
+}
