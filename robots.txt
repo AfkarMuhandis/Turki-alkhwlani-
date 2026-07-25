@@ -1,0 +1,68 @@
+# Robots.txt for Engineer Ideas
+# https://engineerideas.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://engineerideas.com/sitemap.xml
+
+# Disallow admin and private pages
+Disallow: /dashboard
+Disallow: /login
+Disallow: /editor
+Disallow: /checkout
+Disallow: /analytics
+
+# Allow important bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# Social Media Bots
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Pinterest
+Allow: /
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Host directive
+Host: https://engineerideas.com
